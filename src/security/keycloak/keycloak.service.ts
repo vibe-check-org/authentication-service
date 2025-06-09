@@ -101,6 +101,8 @@ export class KeycloakService implements KeycloakConnectOptionsFactory {
     const payloadDecoded = atob(payloadString);
     const payload = JSON.parse(payloadDecoded);
 
+    this.#logger.debug('payload: %o', payload);
+
     const { exp, realm_access } = payload;
     this.#logger.debug('#logPayload: exp=%s', exp);
 
