@@ -4,7 +4,8 @@ import process from 'node:process';
 // Laden der Umgebungsvariablen aus einer .env-Datei
 dotenv.config();
 
-const { NODE_ENV, CLIENT_SECRET, LOG_DEFAULT, START_DB_SERVER } = process.env;
+const { NODE_ENV, KC_SERVICE_SECRET, LOG_DEFAULT, START_DB_SERVER } =
+  process.env;
 
 /* eslint-disable @typescript-eslint/naming-convention */
 /**
@@ -17,7 +18,7 @@ export const env = {
   // - `development` oder
   // - `test`
   NODE_ENV,
-  CLIENT_SECRET,
+  KC_SERVICE_SECRET,
   LOG_DEFAULT,
   START_DB_SERVER,
 } as const;

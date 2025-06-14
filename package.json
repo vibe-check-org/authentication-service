@@ -7,9 +7,6 @@
   "license": "UNLICENSED",
   "scripts": {
     "dev": "nest start --watch --p 9010",
-    "depcheck": "depcheck",
-    "prettier": "prettier --cache --write \"src/**/*.ts\" \"__tests__/**/*.ts\"",
-    "eslint": "eslint src",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -20,18 +17,25 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "depcheck": "depcheck",
+    "typedoc": "typedoc",
+    "eslint": "eslint src __tests__",
+    "prettier": "prettier --cache --write \"src/**/*.ts\""
   },
   "dependencies": {
     "@apollo/client": "^3.10.8",
     "@apollo/subgraph": "^2.8.1",
     "@js-temporal/polyfill": "^0.4.4",
     "@nestjs/apollo": "^12.1.0",
+    "@nestjs/axios": "^4.0.0",
     "@nestjs/cli": "^10.3.2",
     "@nestjs/common": "^10.3.9",
+    "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^10.3.9",
     "@nestjs/graphql": "^12.1.1",
     "@nestjs/platform-express": "^10.0.0",
+    "@nestjs/terminus": "^11.0.0",
     "cfonts": "^3.3.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.2",
@@ -41,6 +45,7 @@
     "graphql": "^16.9.0",
     "helmet": "^8.1.0",
     "js-yaml": "^4.1.0",
+    "kafkajs": "^2.2.4",
     "nest-keycloak-connect": "^1.10.0",
     "pino": "^9.2.0",
     "pino-pretty": "^11.2.1",
@@ -76,6 +81,8 @@
     "ts-loader": "^9.4.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
+    "typedoc": "^0.28.5",
+    "typedoc-plugin-markdown": "^4.6.4",
     "typescript": "^5.1.3"
   },
   "jest": {
