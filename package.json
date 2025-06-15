@@ -48,6 +48,7 @@
     "js-yaml": "^4.1.0",
     "jsonwebtoken": "^9.0.2",
     "kafkajs": "^2.2.4",
+    "keycloak-connect": "^26.1.1",
     "nest-keycloak-connect": "^1.10.0",
     "pino": "^9.2.0",
     "pino-pretty": "^11.2.1",
